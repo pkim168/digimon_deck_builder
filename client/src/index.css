@@ -1,0 +1,422 @@
+body {
+  margin: 0;
+  min-width: 25rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(0, 0, 0, 1)!important;
+  color: white!important;
+  min-height: 100%;
+  max-height: 100%;
+  /* overflow-y: hidden; */
+}
+
+html {
+  height: 100vh;
+}
+#root, .App {
+  max-height: 100vh;
+}
+
+a {
+  text-decoration: none!important;
+}
+
+.account-info-list {
+  background-color: #181818;
+  border-radius: 5px;
+  padding: .5rem;
+}
+
+.bg-1 {
+  background-color: #181818!important;
+}
+
+.btn:focus {
+  box-shadow: none!important;
+}
+
+.card-back {
+  z-Index: 1;
+  position: relative;
+}
+
+.card-col {
+  max-height: 24rem;
+  max-width: 11rem;
+  margin: .5rem;
+}
+
+.card-columns {
+  @include media-breakpoint-only(md) {
+    column-count: 4;
+  }
+}
+
+.home-card {
+  min-width: 350px!important;
+}
+
+.home-card-container {
+  margin-top: 1rem;
+}
+
+.card-container {
+  margin-bottom: .5rem;
+}
+
+.card-deck:after {
+  content: "";
+  display: block;
+  height: 1rem;
+  width: 100%;
+}
+
+.card-front {
+  z-Index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-list-container {
+  overflow-y: auto;
+  /* border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black; */
+  background-color: #181818;
+  border-radius: 0 0 5px 5px;
+  margin-right: 0rem!important;
+  margin-left: 0rem!important;
+  /* padding: .25rem .75rem .75rem .75rem; */
+}
+
+.cards-body{
+  max-height: 14rem;
+  overflow-y: auto;
+}
+
+.cards-body:after {
+  content: "";
+  display: block;
+  height: 1rem;
+  width: 100%;
+}
+
+.cardsWrapper {
+  min-width: 25rem;
+  /* overflow-y:hidden; */
+  min-height: 0;
+  margin-bottom:.5rem;
+}
+
+#component-wrapper {
+  padding-top: 4.5rem;
+  height: 100vh;
+  max-height:100vh;
+  /* overflow-y:hidden; */
+}
+
+.container-fluid {
+  height:100%;
+}
+
+.db-card-list-container {
+  overflow-y: auto;
+  flex-wrap: wrap;
+  /* border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black; */
+  padding: .25rem .75rem .75rem .75rem;
+  background-color: #181818;
+  border-radius: 0 0 5px 5px;
+  margin-right: 0rem!important;
+  margin-left: 0rem!important;
+}
+
+.db-cards-filter-container {
+  max-height:100%;
+}
+
+.deck-info-list {
+  background-color: #181818;
+  border-radius: 5px;
+  padding: .5rem;
+  min-height: 0;
+}
+
+.deck-info-container{
+  min-height: 0;
+  max-height: 100%;
+  padding:0;
+}
+
+.deck-info-list-container {
+  padding: .5rem!important;
+  min-height: 0;
+}
+
+.visualView-container {
+  min-height: 0;
+  max-height: 100%;
+  display: flex;
+}
+
+.visualView-container-decks{
+  min-height:0;
+  max-height:100%;
+  padding: .5rem!important;
+}
+
+.deck-list-container {
+  overflow-y: auto;
+  margin-bottom: .5rem;
+}
+
+.deck-row {
+  margin-bottom: 0rem!important;
+}
+
+.deckInfo {
+  margin: .25rem 0rem .5rem 0rem;
+  padding: 0rem .75rem .75rem .75rem;
+  border-bottom: 3px solid #292b2c;
+}
+
+.deckLink {
+  color: black!important;
+}
+
+.deckMenu {
+  margin: 1.25rem 0rem;
+  padding: .5rem 0rem .25rem 0rem;
+  /* border: 3px solid black; */
+  background-color: #181818;
+  border-radius: 5px;
+}
+
+.decksWrapper {
+  min-width: 25rem;
+  /* overflow-y:hidden; */
+  min-height: 0;
+  margin-bottom:.5rem;
+}
+
+.decks-list-container {
+  max-height: 45rem;
+  overflow-y: auto;
+  padding-top: 1rem;
+  /* border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black; */
+  margin-right: 0rem!important;
+  margin-left: 0rem!important;
+  background-color: #181818;
+  border-radius: 0 0 5px 5px;
+}
+
+.deck-options {
+  padding: 0rem 1.75rem;
+}
+
+.decks-row {
+  margin-bottom: 1rem!important;
+}
+
+.digiEggDeck {
+  margin: .5rem 0rem .5rem 0rem;
+  padding: 0rem .75rem .25rem .75rem;
+  border-bottom: 3px solid #292b2c;
+}
+
+.digiEggDeckList {
+  margin: .5rem 0rem .5rem 0rem;
+  padding: 0rem .75rem .25rem .75rem;
+}
+
+.digimonCard {
+  /* background-color: #2A2A2E!important; */
+}
+
+.dropdown .dropdown-item:hover {
+  background: #6c757d;
+  color:#000;
+}
+
+.egg-deck-list-container {
+  margin-bottom: .5rem;
+}
+
+.filterMenu-left {
+  margin: 1rem 0rem .5rem 0rem;
+  /* border: 3px solid black; */
+  padding: 0rem 1rem;
+  background-color: #181818;
+  border-radius: 5px;
+}
+
+.filterWrapper-top {
+  margin: 1.25rem 0rem .25rem 0rem;
+  /* border: 3px solid black; */
+  padding: 0rem;
+  background-color: #181818;
+  border-radius: 5px;
+  margin-right: 0rem!important;
+  margin-left: 0rem!important;
+}
+
+.filterMenuWrapper {
+  margin:0;
+}
+
+.flex-start {
+  align-content: flex-start
+}
+
+.form-group-filter-element {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.header {
+  padding: 0rem;
+}
+
+.header-container {
+  background-color: #181818;
+  color: white;
+}
+
+.home-content {
+  max-height:100%;
+  overflow-y:auto;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.loader-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: .4;
+  z-index: 101;
+}
+
+.loader-spinner {
+  display: block;
+  z-index: 102;
+}
+
+.mainDeck {
+  margin: .5rem 0rem .5rem 0rem;
+  padding: 0rem .75rem .25rem .75rem;
+  border-bottom: 3px solid #292b2c;
+}
+
+.mainDeck-list-container {
+}
+
+.maxScreen {
+  height: 100%;
+  max-height:100%;
+  /* overflow-y:hidden; */
+}
+
+.nav-pills > a {
+  border-radius: 0!important;
+}
+
+.navbar-custom {
+  background-color: #202020!important;
+}
+
+/* .mainDeckList {
+  margin: 1.25rem 0rem 1.25rem 0rem;
+  padding: 0rem .75rem .25rem .75rem;
+  border: 3px solid black;
+} */
+
+.option-button-container {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
+.pagination-top {
+  /* border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black; */
+  padding: 1rem 0rem .25rem 0rem;
+  margin-top: 1rem;
+  margin-right: 0rem!important;
+  margin-left: 0rem!important;
+  background-color: #181818;
+  border-radius: 5px 5px 0 0;
+}
+
+.panel-row-chart {
+  margin: .25rem 0rem .5rem 0rem;
+  border-bottom: 3px solid #292b2c;
+}
+
+.panel-row-chart-bottom {
+}
+
+.popover {
+  max-width: 35rem!important;
+}
+.popover-card-body-image {
+  margin-right: .25rem;
+}
+
+.popover-card-body-text {
+  margin-left: .25rem;
+}
+
+.static-dropdown {
+  position: static !important
+}
+
+.titleButton {
+  margin-bottom: .5rem;
+}
+
+.user-profile-list {
+  background-color: #181818;
+  border-radius: 5px;
+  padding: .5rem;
+}
+
+#login-register-window {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
+  margin-top: 0px !important;
+  width: 25% !important;
+  min-width: 25rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  background-color: rgba(255, 255, 255)!important;
+}
+
+#login, #register {
+  min-width: 15rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* * {
+   border: 1px solid red;
+} */

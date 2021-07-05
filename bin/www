@@ -1,0 +1,119 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require('../app');
+var debug = require('debug')('digimon-deck-builder-server:server');
+var http = require('http');
+var https = require('https');
+var fs = require('fs');
+
+const options = {
+  key: fs.readFileSync("./www/keys/digidecks.key"),
+  cert: fs.readFileSync("./www/keys/digidecks.crt")
+};
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+// var port = normalizePort(process.env.PORT || '5000');
+// app.set('port', port);
+
+var port = normalizePort('5000');
+app.set('port', port);
+
+// var sPort = normalizePort('8080');
+// app.set('sPort', sPort);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+// var server = https.createServer(options, app);
+// var sServer = https.createServer(options, app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+// Remove this line in production
+// process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
+
+
+server.listen(port, () => {
+    // Tell us what port it's running on
+    console.log("Deck Builder server started on " + port)
+});
+server.on('error', onError);
+server.on('listening', onListening);
+
+// sServer.listen(sPort, () => {
+//     // Tell us what port it's running on
+//     console.log("Deck Builder secure server started on " + sPort)
+// });
+// sServer.on('error', onError);
+// sServer.on('listening', onListening);
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Listening on ' + bind);
+}
